@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#D3D3D3"
+    tools:context=".OthersEventActivity">
+
+    <!--top bar -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/topNav"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#F44336"
+        app:itemTextColor="@drawable/selector"
+        app:itemIconTint="@drawable/selector"
+        app:menu="@menu/menu_choosedateoherevent"/>
+
+    <!-- Bottom bar -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNav"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/corner_border_orange"
+        app:itemTextColor="@drawable/selector"
+        app:itemIconTint="@drawable/selector"
+        app:menu="@menu/menu_bottom"
+        android:layout_alignParentBottom="true"/>
+
+    <!--- show booking date-->
+    <RelativeLayout
+        android:id="@+id/RL_ChooseDateBooking"
+        android:layout_width="wrap_content"
+        android:layout_height="200dp"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="21dp"
+        android:layout_marginRight="21dp"
+        android:background="@drawable/bg_date">
+
+        <ImageView
+                android:id="@+id/img_ChooseDateBooking"
+                android:layout_width="100dp"
+                android:layout_height="250dp"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                app:srcCompat="@drawable/ic_date" />
+
+        <TextView
+            android:id="@+id/textView_ChooseDateBooking"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/img_ChooseDateBooking"
+            android:layout_marginTop="30dp"
+            android:fontFamily="@font/baloo_bhai"
+            android:padding="6dp"
+            android:text="Choose Your Date !"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+
+        <View
+            android:id="@+id/divider_ChooseDateBooking"
+            android:layout_width="250dp"
+            android:layout_height="1dp"
+            android:layout_below="@id/textView_ChooseDateBooking"
+            android:layout_alignStart="@+id/textView_ChooseDateBooking"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="9dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="38dp"
+            android:background="@android:color/black" />
+
+        <EditText
+            android:id="@+id/editText_ChooseDateBooking"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textView_ChooseDateBooking"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_toEndOf="@id/img_ChooseDateBooking"
+            android:background="@android:color/transparent"
+            android:fontFamily="@font/baloo_bhai"
+            android:focusable="false"
+            android:hint="Click here (dd/mm/yyyy)"
+            android:inputType="date"
+            android:padding="6dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            android:textSize="16sp"/>
+
+        <!--- show search-->
+        <Button
+            android:id="@+id/button_ChooseDateBooking"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_centerInParent="true"
+            android:layout_marginEnd="23dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/corner_border_orange"
+            android:fontFamily="@font/baloo_bhai"
+            android:text="Search"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="12sp" />
+    </RelativeLayout>
+
+</RelativeLayout>

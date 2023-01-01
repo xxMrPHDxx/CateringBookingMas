@@ -1,0 +1,479 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".ShopBirthday1AboutUs">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.core.widget.NestedScrollView
+            android:fillViewport="true"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/bg_search"
+                    android:elevation="50dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <!--- show name-->
+                        <RelativeLayout
+                            android:id="@+id/RL1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginTop="20dp"
+                            android:background="@drawable/bg_dish">
+
+                            <ImageView
+                                    android:id="@+id/imageViewName"
+                                    android:layout_width="35dp"
+                                    android:layout_height="35dp"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_marginRight="10dp"
+                                    app:srcCompat="@drawable/ic_fullname" />
+
+                            <TextView
+                                android:id="@+id/textView_name"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_toEndOf="@id/imageViewName"
+                                android:fontFamily="@font/baloo_bhai"
+                                android:padding="6dp"
+                                android:textSize="18sp"
+                                android:text="Name :"
+                                android:textColor="@color/black" />
+
+                            <View
+                                android:id="@+id/divider_name"
+                                android:layout_width="230dp"
+                                android:layout_height="3dp"
+                                android:layout_below="@id/textView_name"
+                                android:layout_alignParentStart="true"
+                                android:layout_marginStart="60dp"
+                                android:background="@color/black" />
+
+                            <TextView
+                                android:id="@+id/textView1_name"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/textView_name"
+                                android:layout_toEndOf="@id/imageViewName"
+                                android:layout_marginTop="10dp"
+                                android:fontFamily="@font/baloo_bhai"
+                                android:padding="6dp"
+                                android:text="AJ Catering"
+                                android:textColor="@color/black"
+                                android:textSize="18sp"/>
+
+                        </RelativeLayout>
+
+                        <!-- show address -->
+                        <RelativeLayout
+                            android:id="@+id/RL2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginTop="20dp"
+                            android:background="@drawable/bg_dish">
+
+                            <ImageView
+                                    android:id="@+id/imageViewAddress"
+                                    android:layout_width="35dp"
+                                    android:layout_height="35dp"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_marginRight="10dp"
+                                    app:srcCompat="@drawable/ic_address" />
+
+                            <TextView
+                                android:id="@+id/textView_address"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_toEndOf="@id/imageViewAddress"
+                                android:fontFamily="@font/baloo_bhai"
+                                android:padding="6dp"
+                                android:textSize="18sp"
+                                android:text="Address :"
+                                android:textColor="@color/black" />
+
+                            <View
+                                android:id="@+id/divider_address"
+                                android:layout_width="230dp"
+                                android:layout_height="3dp"
+                                android:layout_below="@id/textView_address"
+                                android:layout_alignParentStart="true"
+                                android:layout_marginStart="60dp"
+                                android:background="@color/black" />
+
+                            <TextView
+                                android:id="@+id/textView1_address"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/textView_address"
+                                android:layout_toEndOf="@id/imageViewAddress"
+                                android:layout_marginTop="10dp"
+                                android:fontFamily="@font/baloo_bhai"
+                                android:padding="6dp"
+                                android:text="PT 6026 Kedai Kesedar Belakang Petronas Bandar Baru, 18300 Gua Musang"
+                                android:textColor="@color/black"
+                                android:textSize="18sp"/>
+
+                        </RelativeLayout>
+
+                        <!-- show contact -->
+                        <RelativeLayout
+                            android:id="@+id/RL3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginTop="20dp"
+                            android:background="@drawable/bg_dish">
+
+                            <ImageView
+                                    android:id="@+id/imageViewContact"
+                                    android:layout_width="35dp"
+                                    android:layout_height="35dp"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_marginRight="10dp"
+                                    app:srcCompat="@drawable/ic_whatsapp" />
+
+                            <TextView
+                                android:id="@+id/textView_contact"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_toEndOf="@id/imageViewContact"
+                                android:fontFamily="@font/baloo_bhai"
+                                android:padding="6dp"
+                                android:textSize="18sp"
+                                android:text="Contact :"
+                                android:textColor="@color/black" />
+
+                            <View
+                                android:id="@+id/divider_contact"
+                                android:layout_width="230dp"
+                                android:layout_height="3dp"
+                                android:layout_below="@id/textView_contact"
+                                android:layout_alignParentStart="true"
+                                android:layout_marginStart="60dp"
+                                android:background="@color/black" />
+
+                            <TextView
+                                android:id="@+id/textView1_contact"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/textView_contact"
+                                android:layout_toEndOf="@id/imageViewContact"
+                                android:layout_marginTop="10dp"
+                                android:fontFamily="@font/baloo_bhai"
+                                android:padding="6dp"
+                                android:text="+60 17 - 984 3020"
+                                android:textColor="@color/black"
+                                android:textSize="18sp"/>
+
+                        </RelativeLayout>
+
+                        <!-- show email -->
+                        <RelativeLayout
+                            android:id="@+id/RL4"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginTop="20dp"
+                            android:background="@drawable/bg_dish">
+
+                            <ImageView
+                                    android:id="@+id/imageViewEmail"
+                                    android:layout_width="35dp"
+                                    android:layout_height="35dp"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_marginRight="10dp"
+                                    app:srcCompat="@drawable/ic_gmail" />
+
+                            <TextView
+                                android:id="@+id/textView_email"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_toEndOf="@id/imageViewEmail"
+                                android:fontFamily="@font/baloo_bhai"
+                                android:padding="6dp"
+                                android:textSize="18sp"
+                                android:text="Email :"
+                                android:textColor="@color/black" />
+
+                            <View
+                                android:id="@+id/divider_email"
+                                android:layout_width="230dp"
+                                android:layout_height="3dp"
+                                android:layout_below="@id/textView_email"
+                                android:layout_alignParentStart="true"
+                                android:layout_marginStart="60dp"
+                                android:background="@color/black" />
+
+                            <TextView
+                                android:id="@+id/textView1_email"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/textView_email"
+                                android:layout_toEndOf="@id/imageViewEmail"
+                                android:layout_marginTop="10dp"
+                                android:fontFamily="@font/baloo_bhai"
+                                android:padding="6dp"
+                                android:text="NONE"
+                                android:textColor="@color/black"
+                                android:textSize="18sp"/>
+
+                        </RelativeLayout>
+
+                        <!-- show facebook -->
+                        <RelativeLayout
+                            android:id="@+id/RL5"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginTop="20dp"
+                            android:background="@drawable/bg_dish">
+
+                            <ImageView
+                                    android:id="@+id/imageViewFb"
+                                    android:layout_width="35dp"
+                                    android:layout_height="35dp"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_marginRight="10dp"
+                                    app:srcCompat="@drawable/ic_facebook" />
+
+                            <TextView
+                                android:id="@+id/textView_fb"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_toEndOf="@id/imageViewFb"
+                                android:fontFamily="@font/baloo_bhai"
+                                android:padding="6dp"
+                                android:textSize="18sp"
+                                android:text="Facebook :"
+                                android:textColor="@color/black" />
+
+                            <View
+                                android:id="@+id/divider_facebook"
+                                android:layout_width="230dp"
+                                android:layout_height="3dp"
+                                android:layout_below="@id/textView_fb"
+                                android:layout_alignParentStart="true"
+                                android:layout_marginStart="60dp"
+                                android:background="@color/black" />
+
+                            <TextView
+                                android:id="@+id/textView1_fb"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/textView_fb"
+                                android:layout_toEndOf="@id/imageViewFb"
+                                android:layout_marginTop="10dp"
+                                android:fontFamily="@font/baloo_bhai"
+                                android:padding="6dp"
+                                android:text="Cateringmurahguamusang"
+                                android:textColor="@color/black"
+                                android:textSize="18sp"/>
+
+                        </RelativeLayout>
+
+                        <!-- show services -->
+                        <RelativeLayout
+                            android:id="@+id/RL6"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginTop="20dp"
+                            android:background="@drawable/bg_dish">
+
+                            <ImageView
+                                    android:id="@+id/imageViewServices"
+                                    android:layout_width="35dp"
+                                    android:layout_height="35dp"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_marginRight="10dp"
+                                    app:srcCompat="@drawable/ic_services" />
+
+                            <TextView
+                                android:id="@+id/textView_services"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_toEndOf="@id/imageViewServices"
+                                android:fontFamily="@font/baloo_bhai"
+                                android:padding="6dp"
+                                android:textSize="18sp"
+                                android:text="Services :"
+                                android:textColor="@color/black" />
+
+                            <View
+                                android:id="@+id/divider_services"
+                                android:layout_width="230dp"
+                                android:layout_height="3dp"
+                                android:layout_below="@id/textView_services"
+                                android:layout_alignParentStart="true"
+                                android:layout_marginStart="60dp"
+                                android:background="@color/black" />
+
+                            <TextView
+                                android:id="@+id/textView1_services"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/textView_services"
+                                android:layout_toEndOf="@id/imageViewServices"
+                                android:layout_marginTop="10dp"
+                                android:fontFamily="@font/baloo_bhai"
+                                android:padding="6dp"
+                                android:text="Catering and Suprise Decoration Birthday"
+                                android:textColor="@color/black"
+                                android:textSize="18sp"/>
+
+                        </RelativeLayout>
+
+                        <!-- show staff -->
+                        <RelativeLayout
+                            android:id="@+id/RL7"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginTop="20dp"
+                            android:background="@drawable/bg_dish">
+
+                            <ImageView
+                                    android:id="@+id/imageViewStaff"
+                                    android:layout_width="35dp"
+                                    android:layout_height="35dp"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_marginRight="10dp"
+                                    app:srcCompat="@drawable/ic_staff" />
+
+                            <TextView
+                                android:id="@+id/textView_staff"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_toEndOf="@id/imageViewStaff"
+                                android:fontFamily="@font/baloo_bhai"
+                                android:padding="6dp"
+                                android:textSize="18sp"
+                                android:text="Staff :"
+                                android:textColor="@color/black" />
+
+                            <View
+                                android:id="@+id/divider_staff"
+                                android:layout_width="230dp"
+                                android:layout_height="3dp"
+                                android:layout_below="@id/textView_staff"
+                                android:layout_alignParentStart="true"
+                                android:layout_marginStart="60dp"
+                                android:background="@color/black" />
+
+                            <TextView
+                                android:id="@+id/textView1_staff"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/textView_staff"
+                                android:layout_toEndOf="@id/imageViewStaff"
+                                android:layout_marginTop="10dp"
+                                android:fontFamily="@font/baloo_bhai"
+                                android:padding="6dp"
+                                android:text="5 orang"
+                                android:textColor="@color/black"
+                                android:textSize="18sp"/>
+
+                        </RelativeLayout>
+
+                        <!-- show maps -->
+                        <RelativeLayout
+                            android:id="@+id/RL8"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginTop="20dp"
+                            android:background="@drawable/bg_dish">
+
+                            <ImageView
+                                    android:id="@+id/imageViewMaps"
+                                    android:layout_width="35dp"
+                                    android:layout_height="35dp"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_marginRight="10dp"
+                                    app:srcCompat="@drawable/ic_maps" />
+
+                            <TextView
+                                android:id="@+id/textView_maps"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_toEndOf="@id/imageViewMaps"
+                                android:fontFamily="@font/baloo_bhai"
+                                android:padding="6dp"
+                                android:textSize="18sp"
+                                android:text="Maps :"
+                                android:textColor="@color/black" />
+
+                            <View
+                                android:id="@+id/divider_maps"
+                                android:layout_width="230dp"
+                                android:layout_height="3dp"
+                                android:layout_below="@id/textView_maps"
+                                android:layout_alignParentStart="true"
+                                android:layout_marginStart="60dp"
+                                android:background="@color/black" />
+
+                            <ImageView
+                                    android:layout_width="350dp"
+                                    android:layout_height="230dp"
+                                    android:layout_marginStart="5dp"
+                                    android:layout_marginTop="45dp"
+                                    android:gravity="center_vertical"
+                                    app:srcCompat="@drawable/ic_maps2" />
+
+                        </RelativeLayout>
+
+
+
+
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+    </FrameLayout>
+
+</RelativeLayout>

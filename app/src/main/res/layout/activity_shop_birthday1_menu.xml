@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".ShopBirthday1Menu">
+
+    <!--bottom bar -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNav"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded"
+        app:itemTextColor="@drawable/selector"
+        app:itemIconTint="@drawable/selector"
+        app:menu="@menu/menu_bottom"
+        android:layout_alignParentBottom="true"/>
+
+    <androidx.core.widget.NestedScrollView
+        android:fillViewport="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="50dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <!--menu 1-->
+            <LinearLayout
+                android:id="@+id/layout1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#fff4f4f4"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="1dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_weight="1"
+                    android:background="#fff4f4f4"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:id="@+id/packagemenu1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/baloo_bhai"
+                        android:text="Menu A (RM 15.50 PAX)"
+                        android:textAllCaps="true"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        android:textAlignment="center"/>
+
+                    <ImageView
+                            android:id="@+id/imgfood1"
+                            android:layout_width="220dp"
+                            android:layout_height="200dp"
+                            app:srcCompat="@drawable/foodbirthday1"/>
+
+                    <LinearLayout
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/decrease"
+                            android:layout_width="50dp"
+                            android:layout_height="wrap_content"
+                            android:onClick="decreaseInteger"
+                            android:background="#C60A0A"
+                            android:text="-"
+                            android:textSize="20sp"
+                            android:textColor="@color/white"/>
+
+                        <TextView
+                            android:id="@+id/integer_number"
+                            android:layout_width="30dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:text="0"
+                            android:textColor="@color/black"
+                            android:textSize="25sp"
+                            android:textStyle="bold"/>
+
+                        <Button
+                            android:id="@+id/increase"
+                            android:layout_width="50dp"
+                            android:layout_height="wrap_content"
+                            android:background="#4CAF50"
+                            android:onClick="increaseInteger"
+                            android:text="+"
+                            android:textColor="@color/white"
+                            android:textSize="20sp" />
+
+                    </LinearLayout>
+
+                    <Button
+                        android:id="@+id/addcart1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:backgroundTint="#F44336"
+                        android:fontFamily="@font/baloo_bhai"
+                        android:text="add to trolly"
+                        android:textAllCaps="true"
+                        android:textColor="#fff"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="100dp"
+                    android:layout_marginRight="1dp"
+                    android:layout_weight="1"
+                    android:background="#fff4f4f4"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <Button
+                        android:id="@+id/txtMenu1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="#E91E63"
+                        android:fontFamily="@font/baloo_bhai"
+                        android:text="Min 50 Pax"
+                        android:textAllCaps="false"
+                        android:textColor="#fff"
+                        android:textSize="14sp" />
+
+                    <Button
+                        android:id="@+id/txtMenu2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="#E91E63"
+                        android:fontFamily="@font/baloo_bhai"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp"
+                        android:text="8 Sajian Menu"
+                        android:textAllCaps="false"
+                        android:textColor="#fff"
+                        android:textSize="14sp" />
+
+                    <Button
+                        android:id="@+id/txtMenu3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="#E91E63"
+                        android:fontFamily="@font/baloo_bhai"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp"
+                        android:text="1 orang Staff"
+                        android:textAllCaps="false"
+                        android:textColor="#fff"
+                        android:textSize="14sp" />
+
+                    <Button
+                        android:id="@+id/txtMenu4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="#E91E63"
+                        android:fontFamily="@font/baloo_bhai"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp"
+                        android:text="Add On Deko (RM180)"
+                        android:textAllCaps="false"
+                        android:textColor="#fff"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+
+                <!--menu 2-->
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#fff4f4f4"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="1dp"
+                    android:layout_weight="1"
+                    android:background="#fff4f4f4"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:id="@+id/packagemenu2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/baloo_bhai"
+                        android:text="Menu B (RM 17.50 PAX)"
+                        android:textAllCaps="true"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        android:textAlignment="center"/>
+
+                    <ImageView
+                            android:id="@+id/imgfood2"
+                            android:layout_width="220dp"
+                            android:layout_height="200dp"
+                            app:srcCompat="@drawable/foodbirthday2"/>
+
+                    <LinearLayout
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/decrease2"
+                            android:layout_width="50dp"
+                            android:layout_height="wrap_content"
+                            android:onClick="decreaseInteger2"
+                            android:background="#C60A0A"
+                            android:text="-"
+                            android:textSize="20sp"
+                            android:textColor="@color/white"/>
+
+                        <TextView
+                            android:id="@+id/integer_number2"
+                            android:layout_width="30dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:text="0"
+                            android:textColor="@color/black"
+                            android:textSize="25sp"
+                            android:textStyle="bold"/>
+
+                        <Button
+                            android:id="@+id/increase2"
+                            android:layout_width="50dp"
+                            android:layout_height="wrap_content"
+                            android:background="#4CAF50"
+                            android:onClick="increaseInteger2"
+                            android:text="+"
+                            android:textColor="@color/white"
+                            android:textSize="20sp" />
+
+                    </LinearLayout>
+
+                    <Button
+                        android:id="@+id/addcart2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:backgroundTint="#F44336"
+                        android:fontFamily="@font/baloo_bhai"
+                        android:text="add to trolly"
+                        android:textAllCaps="true"
+                        android:textColor="#fff"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="1dp"
+                    android:layout_marginTop="100dp"
+                    android:layout_weight="1"
+                    android:background="#fff4f4f4"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <Button
+                        android:id="@+id/txtMenu21"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="#E91E63"
+                        android:fontFamily="@font/baloo_bhai"
+                        android:text="Min 100 Pax"
+                        android:textAllCaps="false"
+                        android:textColor="#fff"
+                        android:textSize="14sp" />
+
+                    <Button
+                        android:id="@+id/txtMenu22"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="#E91E63"
+                        android:fontFamily="@font/baloo_bhai"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp"
+                        android:text="7 Sajian Menu"
+                        android:textAllCaps="false"
+                        android:textColor="#fff"
+                        android:textSize="14sp" />
+
+                    <Button
+                        android:id="@+id/txtMenu23"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="#E91E63"
+                        android:fontFamily="@font/baloo_bhai"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp"
+                        android:text="1 Orang Staff"
+                        android:textAllCaps="false"
+                        android:textColor="#fff"
+                        android:textSize="14sp" />
+
+                    <Button
+                        android:id="@+id/txtMenu24"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="#E91E63"
+                        android:fontFamily="@font/baloo_bhai"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp"
+                        android:text="Add On Deko (RM180)"
+                        android:textAllCaps="false"
+                        android:textColor="#fff"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</RelativeLayout>

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "233102787302",
+    "project_id": "catering-booking-application",
+    "storage_bucket": "catering-booking-application.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:233102787302:android:b9ab6c5a8a668dfa2c7127",
+        "android_client_info": {
+          "package_name": "com.example.cateringbooking"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "233102787302-pss1hn4i00gujnrc78mqvbsmv625n75g.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAO-DnsEmXPNcTGQGo9VawAto1V3FeVoCA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "233102787302-pss1hn4i00gujnrc78mqvbsmv625n75g.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

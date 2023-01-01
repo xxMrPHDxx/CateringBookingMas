@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView  xmlns:android="http://schemas.android.com/apk/res/android"
+                                    xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F44336"
+    android:id="@+id/cardView_booking">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#F44336"
+        android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@drawable/bg_search"
+        android:elevation="50dp" >
+
+        <RelativeLayout
+            android:id="@+id/RL1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="20dp">
+
+            <ImageView
+                    android:id="@+id/imageViewHistory"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_alignParentTop="true"
+                    app:srcCompat="@drawable/ic_history2" />
+
+            <TextView
+                android:id="@+id/textView_img"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/baloo_bhai"
+                android:padding="6dp"
+                android:text="Booking Wedding"
+                android:layout_marginLeft="20dp"
+                android:layout_toEndOf="@id/imageViewHistory"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/textView_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/imageViewHistory"
+                android:fontFamily="@font/baloo_bhai"
+                android:layout_marginTop="5dp"
+                android:padding="6dp"
+                android:textSize="18sp"
+                android:text="Name :"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/textView1_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/baloo_bhai"
+                android:padding="6dp"
+                android:layout_marginTop="5dp"
+                android:hint="Loading ..."
+                android:layout_marginLeft="70dp"
+                android:layout_below="@id/imageViewHistory"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/textView_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView_name"
+                android:fontFamily="@font/baloo_bhai"
+                android:layout_marginTop="5dp"
+                android:padding="6dp"
+                android:textSize="18sp"
+                android:text="Date    :"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/textView1_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/baloo_bhai"
+                android:padding="6dp"
+                android:layout_marginTop="5dp"
+                android:hint="Loading ..."
+                android:layout_marginLeft="70dp"
+                android:layout_below="@id/textView_name"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+</LinearLayout>
+
+</androidx.cardview.widget.CardView >

@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".HomePage">
+
+    <!-- top layout-->
+    <RelativeLayout
+        android:id="@+id/toplayout"
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:background="@drawable/half_rounded" >
+
+        <!-- text welcome -->
+        <TextView
+            android:id="@+id/textView_show_welcome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/baloo_bhai"
+            android:hint="Loading..."
+            android:textColorHint="@color/white"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+        <View
+            android:layout_marginTop="5dp"
+            android:layout_below="@id/textView_show_welcome"
+            android:layout_marginStart="15dp"
+            android:layout_width="30dp"
+            android:layout_height="5dp"
+            android:background="@drawable/bg_search"/>
+
+        <!-- picture -->
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/imageView_profile_dp"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="15dp"
+            android:elevation="3dp"
+            android:src="@drawable/userprofile" />
+
+    </RelativeLayout>
+
+    <!-- Bottom bar -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNav"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded"
+        app:itemTextColor="@drawable/selector"
+        app:itemIconTint="@drawable/selector"
+        app:menu="@menu/menu_bottom"
+        android:layout_alignParentBottom="true"/>
+
+    <!-- weeding event -->
+    <RelativeLayout
+        android:id="@+id/RL_wedding"
+        android:layout_width="354dp"
+        android:layout_height="90dp"
+        android:layout_centerInParent="true"
+        android:layout_below="@+id/toplayout"
+        android:layout_marginTop="80dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="10dp"
+        android:paddingTop="10dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="70dp"
+            android:layout_marginRight="20dp">
+
+            <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:alpha="0.3"
+                    app:srcCompat="@drawable/corner_border_orange"
+                    app:tint="#77000000" />
+
+            <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="3dp"
+                    android:layout_marginBottom="3dp"
+                    app:srcCompat="@drawable/corner_border_orange" />
+        </RelativeLayout>
+
+        <ImageView
+                android:id="@+id/imgWedding"
+                android:layout_width="120dp"
+                android:layout_height="match_parent"
+                android:padding="1dp"
+                app:srcCompat="@drawable/ic_wedding" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="120dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView_wedding"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_weight="1"
+                android:fontFamily="@font/baloo_bhai"
+                android:gravity="center_vertical"
+                android:paddingBottom="1dp"
+                android:text="Wedding Event"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+    </RelativeLayout>
+
+    <!-- birthday event -->
+    <RelativeLayout
+        android:id="@+id/RL_birthday"
+        android:layout_width="354dp"
+        android:layout_height="90dp"
+        android:layout_centerInParent="true"
+        android:layout_below="@+id/RL_wedding"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="10dp"
+        android:paddingTop="10dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="70dp"
+            android:layout_marginRight="20dp">
+
+            <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:alpha="0.3"
+                    app:srcCompat="@drawable/corner_border_orange"
+                    app:tint="#77000000" />
+
+            <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="3dp"
+                    android:layout_marginBottom="3dp"
+                    app:srcCompat="@drawable/corner_border_orange" />
+        </RelativeLayout>
+
+        <ImageView
+                android:id="@+id/imgBirthday"
+                android:layout_width="120dp"
+                android:layout_height="match_parent"
+                android:padding="1dp"
+                app:srcCompat="@drawable/ic_birthday1" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="120dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView_birthday"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_weight="1"
+                android:fontFamily="@font/baloo_bhai"
+                android:gravity="center_vertical"
+                android:paddingBottom="1dp"
+                android:text="Birthday Event"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+    </RelativeLayout>
+
+    <!-- other event -->
+    <RelativeLayout
+        android:id="@+id/RL_otherevent"
+        android:layout_width="354dp"
+        android:layout_height="90dp"
+        android:layout_centerInParent="true"
+        android:layout_below="@+id/RL_birthday"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="10dp"
+        android:paddingTop="10dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="70dp"
+            android:layout_marginRight="20dp">
+
+            <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:alpha="0.3"
+                    app:srcCompat="@drawable/corner_border_orange"
+                    app:tint="#77000000" />
+
+            <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="3dp"
+                    android:layout_marginBottom="3dp"
+                    app:srcCompat="@drawable/corner_border_orange" />
+        </RelativeLayout>
+
+        <ImageView
+                android:id="@+id/imgOtherEvent"
+                android:layout_width="120dp"
+                android:layout_height="match_parent"
+                android:padding="1dp"
+                app:srcCompat="@drawable/ic_otherevent" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="120dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView_otherevent"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_weight="1"
+                android:fontFamily="@font/baloo_bhai"
+                android:gravity="center_vertical"
+                android:paddingBottom="1dp"
+                android:text="Other Event"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>
