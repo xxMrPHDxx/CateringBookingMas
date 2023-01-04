@@ -18,9 +18,14 @@
         app:menu="@menu/menu_bottom"
         android:layout_alignParentBottom="true"/>
 
-    <ListView
-        android:id="@+id/listViewPelamin"
-        android:layout_width="match_parent"
-        android:layout_height="595dp"/>
+    <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="595dp">
+    <LinearLayout
+            android:id="@+id/listViewPelamin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"/>
+    </ScrollView>
 
 </RelativeLayout>

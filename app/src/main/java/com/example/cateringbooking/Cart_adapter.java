@@ -24,17 +24,20 @@ import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.List;
 
-public class Cart_adapter extends ArrayAdapter<Pelamin_class> {
+public class Cart_adapter extends View {
 
     private AppCompatActivity context;
     private List<Pelamin_class> viewPelaminList;
+    private List<Menu_class> viewMenuList;
 
     public Cart_adapter (AppCompatActivity context, List<Pelamin_class> viewPelaminList) {
-        super(context, R.layout.list_trolly, viewPelaminList);
+        super(context);
+//        setContentView(R.layout.list_trolly);
         this.context = context;
         this.viewPelaminList = viewPelaminList;
     }
 
+    /*
     @NonNull
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
@@ -67,4 +70,5 @@ public class Cart_adapter extends ArrayAdapter<Pelamin_class> {
 
         return listViewItem;
     }
+    */
 }
