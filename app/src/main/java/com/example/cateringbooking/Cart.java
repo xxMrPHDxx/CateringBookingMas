@@ -99,11 +99,12 @@ public class Cart extends AppCompatActivity {
         myRef.child(firebaseuser.getUid()).get().addOnCompleteListener((task) -> {
            for(final DataSnapshot pelamin : task.getResult().getChildren()){
                Pelamin_class pelaminClass = pelamin.getValue(Pelamin_class.class);
-               View view = getLayoutInflater().inflate(R.layout.list_trolly, listViewPelamin);
+               View view = getLayoutInflater().inflate(R.layout.list_trolly, null);
                TextView viewTypePelamin = view.findViewById(R.id.txtname);
                TextView viewPrice =  view.findViewById(R.id.txtPrice);
                Button buttonDelete = view.findViewById(R.id.buttondelete);
                ImageView image = view.findViewById(R.id.list_trolly_image);
+               listViewPelamin.addView(view);
 
                assert pelaminClass != null;
                viewTypePelamin.setText(pelaminClass.getName());
@@ -111,6 +112,10 @@ public class Cart extends AppCompatActivity {
                image.setImageResource(pelaminClass.getImage());
                buttonDelete.setOnClickListener(v -> {
                    pelamin.getRef().removeValue((error, ref1) -> {
+                       if(error != null){
+                           Toast.makeText(this, error.toString(), Toast.LENGTH_SHORT).show();
+                           return;
+                       }
                        listViewPelamin.removeView(view);
                    });
                });
@@ -148,7 +153,7 @@ public class Cart extends AppCompatActivity {
            DataSnapshot snapshot = task.getResult();
            for(final DataSnapshot menu : snapshot.getChildren()){
                Menu_class menuClass = menu.getValue(Menu_class.class);
-               View view = getLayoutInflater().inflate(R.layout.list_menu, listViewPelamin);
+               View view = getLayoutInflater().inflate(R.layout.list_menu, null);
                ((TextView)view.findViewById(R.id.textViewPackage)).setText(menuClass.getPackageMenu());
                ((TextView)view.findViewById(R.id.textView1_Quantity)).setText(menuClass.getQuantity());
                ((TextView)view.findViewById(R.id.textView_menu1)).setText(menuClass.getMenu1());
@@ -159,6 +164,12 @@ public class Cart extends AppCompatActivity {
                ((TextView)view.findViewById(R.id.textView_menu6)).setText(menuClass.getMenu6());
                ((TextView)view.findViewById(R.id.textView_menu7)).setText(menuClass.getMenu7());
                ((TextView)view.findViewById(R.id.textView_menu8)).setText(menuClass.getMenu8());
+               view.findViewById(R.id.listmenu_btn_remove).setOnClickListener(v -> {
+                   menu.getRef().removeValue((err, ref) -> {
+                       listViewPelamin.removeView(view);
+                   });
+               });
+               listViewPelamin.addView(view);
            }
         });
     }
